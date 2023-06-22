@@ -1,0 +1,12 @@
+백준 2525번 
+hr,min=map(int,input().split())
+a=int(input())
+count=0
+if min+a>59:
+  hr=hr+(min+a)//60
+  min=(min+a)%60
+  if hr>=24:
+    hr=hr%24
+else:
+  min=a+min
+print(hr,min)
